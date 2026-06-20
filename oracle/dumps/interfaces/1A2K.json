@@ -1,0 +1,259 @@
+{
+ "GlobalDockQ": 0.6529108601227008,
+ "best_chain_map": {
+  "A": "B",
+  "B": "A",
+  "C": "C"
+ },
+ "best_mapping_str": "BAC:ABC",
+ "best_total_dockq": 1.9587325803681026,
+ "error": null,
+ "interfaces": {
+  "AB": {
+   "alignments": [
+    {
+     "matches": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "KPIWEQIGSSFIQHYYQLFDNDRTQLGAIYIDASCLTWEGQQFQGKAAIVEKLSSLPFQKIQHSITAQDHQPTPDSCIISMVVGQLKADEDPIMGFHQMFLLKNINDAWVCTNDMFRLALHNFG",
+     "seqB": "KPIWEQIGSSFIQHYYQLFDNDRTQLGAIYIDASCLTWEGQQFQGKAAIVEKLSSLPFQKIQHSITAQDHQPTPDSCIISMVVGQLKADEDPIMGFHQMFLLKNINDAWVCTNDMFRLALHNFG"
+    },
+    {
+     "matches": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "KPIWEQIGSSFIQHYYQLFDNDRTQLGAIYIDASCLTWEGQQFQGKAAIVEKLSSLPFQKIQHSITAQDHQPTPDSCIISMVVGQLKADEDPIMGFHQMFLLKNINDAWVCTNDMFRLALHNFG",
+     "seqB": "KPIWEQIGSSFIQHYYQLFDNDRTQLGAIYIDASCLTWEGQQFQGKAAIVEKLSSLPFQKIQHSITAQDHQPTPDSCIISMVVGQLKADEDPIMGFHQMFLLKNINDAWVCTNDMFRLALHNFG"
+    }
+   ],
+   "fnat_stats": [
+    117,
+    1,
+    119,
+    118
+   ],
+   "info": {
+    "DockQ": 0.9943977591033133,
+    "F1": 0.9873417721518988,
+    "LRMSD": 1.905186447866421e-07,
+    "chain1": "B",
+    "chain2": "A",
+    "chain_map": {
+     "A": "B",
+     "B": "A",
+     "C": "C"
+    },
+    "clashes": 0,
+    "class1": "ligand",
+    "class2": "receptor",
+    "fnat": 0.9831932773109243,
+    "fnonnat": 0.00847457627118644,
+    "iRMSD": 1.4879852993911616e-06,
+    "is_het": false,
+    "len1": 124,
+    "len2": 124,
+    "model_total": 118,
+    "nat_correct": 117,
+    "nat_total": 119,
+    "nonnat_count": 1
+   },
+   "irms": 1.4879852993911616e-06,
+   "is_het": false,
+   "lrms": 1.905186447866421e-07,
+   "native_residue_distances": {
+    "bytes_sha256": "4882684dd3fe502fcb17ae3a94846213aa281dcd1a09762559abb959e5c2023d",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 775,
+    "n_lt_25": 119,
+    "n_lt_4": 0,
+    "n_lt_fnat": 119,
+    "n_lt_interface": 775,
+    "shape": [
+     124,
+     124
+    ]
+   },
+   "residue_distances": {
+    "bytes_sha256": "eda5276641cc140a152cef22075e23557f4c14a4fa8ab1acfe184f29a32e3275",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 776,
+    "n_lt_25": 118,
+    "n_lt_4": 0,
+    "n_lt_fnat": 118,
+    "n_lt_interface": 776,
+    "shape": [
+     124,
+     124
+    ]
+   }
+  },
+  "AC": {
+   "alignments": [
+    {
+     "matches": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "KPIWEQIGSSFIQHYYQLFDNDRTQLGAIYIDASCLTWEGQQFQGKAAIVEKLSSLPFQKIQHSITAQDHQPTPDSCIISMVVGQLKADEDPIMGFHQMFLLKNINDAWVCTNDMFRLALHNFG",
+     "seqB": "KPIWEQIGSSFIQHYYQLFDNDRTQLGAIYIDASCLTWEGQQFQGKAAIVEKLSSLPFQKIQHSITAQDHQPTPDSCIISMVVGQLKADEDPIMGFHQMFLLKNINDAWVCTNDMFRLALHNFG"
+    },
+    {
+     "matches": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "QVQFKLVLVGDGGTGKTTFVKRHLTGEFEKKYVATLGVEVHPLVFHTNRGPIKFNVWDTAGQEKFGGLRDGYYIQAQCAIIMFDVTSRVTYKNVPNWHRDLVRVCENIPIVLCGNKVDIKDRKVKAKSIVFHRKKNLQYYDISAKSNYNFEKPFLWLARKLIGDPNLEFVAMPALAPPEVVMDPALAAQYEHDLEV",
+     "seqB": "QVQFKLVLVGDGGTGKTTFVKRHLTGEFEKKYVATLGVEVHPLVFHTNRGPIKFNVWDTAGQEKFGGLRDGYYIQAQCAIIMFDVTSRVTYKNVPNWHRDLVRVCENIPIVLCGNKVDIKDRKVKAKSIVFHRKKNLQYYDISAKSNYNFEKPFLWLARKLIGDPNLEFVAMPALAPPEVVMDPALAAQYEHDLEV"
+    }
+   ],
+   "fnat_stats": [
+    1,
+    0,
+    3,
+    1
+   ],
+   "info": {
+    "DockQ": 0.5112803577991729,
+    "F1": 0.5,
+    "LRMSD": 6.8643675801712165,
+    "chain1": "B",
+    "chain2": "C",
+    "chain_map": {
+     "A": "B",
+     "B": "A",
+     "C": "C"
+    },
+    "clashes": 0,
+    "class1": "ligand",
+    "class2": "receptor",
+    "fnat": 0.3333333333333333,
+    "fnonnat": 0,
+    "iRMSD": 1.2369153344265127,
+    "is_het": false,
+    "len1": 124,
+    "len2": 196,
+    "model_total": 1,
+    "nat_correct": 1,
+    "nat_total": 3,
+    "nonnat_count": 0
+   },
+   "irms": 1.2369153344265127,
+   "is_het": false,
+   "lrms": 6.8643675801712165,
+   "native_residue_distances": {
+    "bytes_sha256": "64928f7d8dda0a2c968403a560eb98735f4bc4cb2af0e8ea7d98128da9064b9d",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 43,
+    "n_lt_25": 3,
+    "n_lt_4": 0,
+    "n_lt_fnat": 3,
+    "n_lt_interface": 43,
+    "shape": [
+     124,
+     196
+    ]
+   },
+   "residue_distances": {
+    "bytes_sha256": "b39715d929570b30a7c88bc58603e05289a0eee70b2400745b497defe84738c6",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 29,
+    "n_lt_25": 1,
+    "n_lt_4": 0,
+    "n_lt_fnat": 1,
+    "n_lt_interface": 29,
+    "shape": [
+     124,
+     196
+    ]
+   }
+  },
+  "BC": {
+   "alignments": [
+    {
+     "matches": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "KPIWEQIGSSFIQHYYQLFDNDRTQLGAIYIDASCLTWEGQQFQGKAAIVEKLSSLPFQKIQHSITAQDHQPTPDSCIISMVVGQLKADEDPIMGFHQMFLLKNINDAWVCTNDMFRLALHNFG",
+     "seqB": "KPIWEQIGSSFIQHYYQLFDNDRTQLGAIYIDASCLTWEGQQFQGKAAIVEKLSSLPFQKIQHSITAQDHQPTPDSCIISMVVGQLKADEDPIMGFHQMFLLKNINDAWVCTNDMFRLALHNFG"
+    },
+    {
+     "matches": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "QVQFKLVLVGDGGTGKTTFVKRHLTGEFEKKYVATLGVEVHPLVFHTNRGPIKFNVWDTAGQEKFGGLRDGYYIQAQCAIIMFDVTSRVTYKNVPNWHRDLVRVCENIPIVLCGNKVDIKDRKVKAKSIVFHRKKNLQYYDISAKSNYNFEKPFLWLARKLIGDPNLEFVAMPALAPPEVVMDPALAAQYEHDLEV",
+     "seqB": "QVQFKLVLVGDGGTGKTTFVKRHLTGEFEKKYVATLGVEVHPLVFHTNRGPIKFNVWDTAGQEKFGGLRDGYYIQAQCAIIMFDVTSRVTYKNVPNWHRDLVRVCENIPIVLCGNKVDIKDRKVKAKSIVFHRKKNLQYYDISAKSNYNFEKPFLWLARKLIGDPNLEFVAMPALAPPEVVMDPALAAQYEHDLEV"
+    }
+   ],
+   "fnat_stats": [
+    25,
+    3,
+    50,
+    28
+   ],
+   "info": {
+    "DockQ": 0.45305446346561645,
+    "F1": 0.6410256410256411,
+    "LRMSD": 8.131498175681877,
+    "chain1": "A",
+    "chain2": "C",
+    "chain_map": {
+     "A": "B",
+     "B": "A",
+     "C": "C"
+    },
+    "clashes": 0,
+    "class1": "ligand",
+    "class2": "receptor",
+    "fnat": 0.5,
+    "fnonnat": 0.10714285714285714,
+    "iRMSD": 2.103856735883947,
+    "is_het": false,
+    "len1": 124,
+    "len2": 196,
+    "model_total": 28,
+    "nat_correct": 25,
+    "nat_total": 50,
+    "nonnat_count": 3
+   },
+   "irms": 2.103856735883947,
+   "is_het": false,
+   "lrms": 8.131498175681877,
+   "native_residue_distances": {
+    "bytes_sha256": "5810023ea215b17b46a0427adc511bee1b347a6a1a278a41aaaa07a0c336bc2a",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 370,
+    "n_lt_25": 50,
+    "n_lt_4": 0,
+    "n_lt_fnat": 50,
+    "n_lt_interface": 370,
+    "shape": [
+     124,
+     196
+    ]
+   },
+   "residue_distances": {
+    "bytes_sha256": "7e8e02810512016f1ca7997542f9257666e5a4b6dfcf2401a2e5071645b6ae58",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 233,
+    "n_lt_25": 28,
+    "n_lt_4": 0,
+    "n_lt_fnat": 28,
+    "n_lt_interface": 233,
+    "shape": [
+     124,
+     196
+    ]
+   }
+  }
+ },
+ "kwargs": {},
+ "model": "/Users/Andre.Teixeira/projects/DockQ/examples/1A2K_r_l_b.model.pdb",
+ "n_interfaces": 3,
+ "name": "1A2K",
+ "native": "/Users/Andre.Teixeira/projects/DockQ/examples/1A2K_r_l_b.pdb",
+ "total_dockq": 1.9587325803681026
+}

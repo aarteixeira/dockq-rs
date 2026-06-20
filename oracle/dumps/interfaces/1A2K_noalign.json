@@ -1,0 +1,261 @@
+{
+ "GlobalDockQ": 0.6529108601227008,
+ "best_chain_map": {
+  "A": "B",
+  "B": "A",
+  "C": "C"
+ },
+ "best_mapping_str": "BAC:ABC",
+ "best_total_dockq": 1.9587325803681026,
+ "error": null,
+ "interfaces": {
+  "AB": {
+   "alignments": [
+    {
+     "matches": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\u007f\u0080\u0081\u0082\u0083\u0084\u0085\u0086\u0087\u0088\u0089\u008a\u008b\u008c\u008d\u008e\u008f\u0090\u0091\u0092\u0093\u0094\u0095\u0096\u0097\u0098\u0099\u009a\u009b\u009c\u009d\u009e\u009f\u00a0\u00a1\u00a2\u00a3\u00a4\u00a5\u00a6\u00a7\u00a8\u00a9\u00aa\u00ab\u00ac",
+     "seqB": "123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\u007f\u0080\u0081\u0082\u0083\u0084\u0085\u0086\u0087\u0088\u0089\u008a\u008b\u008c\u008d\u008e\u008f\u0090\u0091\u0092\u0093\u0094\u0095\u0096\u0097\u0098\u0099\u009a\u009b\u009c\u009d\u009e\u009f\u00a0\u00a1\u00a2\u00a3\u00a4\u00a5\u00a6\u00a7\u00a8\u00a9\u00aa\u00ab\u00ac"
+    },
+    {
+     "matches": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\u007f\u0080\u0081\u0082\u0083\u0084\u0085\u0086\u0087\u0088\u0089\u008a\u008b\u008c\u008d\u008e\u008f\u0090\u0091\u0092\u0093\u0094\u0095\u0096\u0097\u0098\u0099\u009a\u009b\u009c\u009d\u009e\u009f\u00a0\u00a1\u00a2\u00a3\u00a4\u00a5\u00a6\u00a7\u00a8\u00a9\u00aa\u00ab\u00ac",
+     "seqB": "123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\u007f\u0080\u0081\u0082\u0083\u0084\u0085\u0086\u0087\u0088\u0089\u008a\u008b\u008c\u008d\u008e\u008f\u0090\u0091\u0092\u0093\u0094\u0095\u0096\u0097\u0098\u0099\u009a\u009b\u009c\u009d\u009e\u009f\u00a0\u00a1\u00a2\u00a3\u00a4\u00a5\u00a6\u00a7\u00a8\u00a9\u00aa\u00ab\u00ac"
+    }
+   ],
+   "fnat_stats": [
+    117,
+    1,
+    119,
+    118
+   ],
+   "info": {
+    "DockQ": 0.9943977591033133,
+    "F1": 0.9873417721518988,
+    "LRMSD": 1.905186447866421e-07,
+    "chain1": "B",
+    "chain2": "A",
+    "chain_map": {
+     "A": "B",
+     "B": "A",
+     "C": "C"
+    },
+    "clashes": 0,
+    "class1": "ligand",
+    "class2": "receptor",
+    "fnat": 0.9831932773109243,
+    "fnonnat": 0.00847457627118644,
+    "iRMSD": 1.4879852993911616e-06,
+    "is_het": false,
+    "len1": 124,
+    "len2": 124,
+    "model_total": 118,
+    "nat_correct": 117,
+    "nat_total": 119,
+    "nonnat_count": 1
+   },
+   "irms": 1.4879852993911616e-06,
+   "is_het": false,
+   "lrms": 1.905186447866421e-07,
+   "native_residue_distances": {
+    "bytes_sha256": "4882684dd3fe502fcb17ae3a94846213aa281dcd1a09762559abb959e5c2023d",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 775,
+    "n_lt_25": 119,
+    "n_lt_4": 0,
+    "n_lt_fnat": 119,
+    "n_lt_interface": 775,
+    "shape": [
+     124,
+     124
+    ]
+   },
+   "residue_distances": {
+    "bytes_sha256": "eda5276641cc140a152cef22075e23557f4c14a4fa8ab1acfe184f29a32e3275",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 776,
+    "n_lt_25": 118,
+    "n_lt_4": 0,
+    "n_lt_fnat": 118,
+    "n_lt_interface": 776,
+    "shape": [
+     124,
+     124
+    ]
+   }
+  },
+  "AC": {
+   "alignments": [
+    {
+     "matches": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\u007f\u0080\u0081\u0082\u0083\u0084\u0085\u0086\u0087\u0088\u0089\u008a\u008b\u008c\u008d\u008e\u008f\u0090\u0091\u0092\u0093\u0094\u0095\u0096\u0097\u0098\u0099\u009a\u009b\u009c\u009d\u009e\u009f\u00a0\u00a1\u00a2\u00a3\u00a4\u00a5\u00a6\u00a7\u00a8\u00a9\u00aa\u00ab\u00ac",
+     "seqB": "123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\u007f\u0080\u0081\u0082\u0083\u0084\u0085\u0086\u0087\u0088\u0089\u008a\u008b\u008c\u008d\u008e\u008f\u0090\u0091\u0092\u0093\u0094\u0095\u0096\u0097\u0098\u0099\u009a\u009b\u009c\u009d\u009e\u009f\u00a0\u00a1\u00a2\u00a3\u00a4\u00a5\u00a6\u00a7\u00a8\u00a9\u00aa\u00ab\u00ac"
+    },
+    {
+     "matches": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "56789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\u007f\u0080\u0081\u0082\u0083\u0084\u0085\u0086\u0087\u0088\u0089\u008a\u008b\u008c\u008d\u008e\u008f\u0090\u0091\u0092\u0093\u0094\u0095\u0096\u0097\u0098\u0099\u009a\u009b\u009c\u009d\u009e\u009f\u00a0\u00a1\u00a2\u00a3\u00a4\u00a5\u00a6\u00a7\u00a8\u00a9\u00aa\u00ab\u00ac\u00ad\u00ae\u00af\u00b0\u00b1\u00b2\u00b3\u00b4\u00b5\u00b6\u00b7\u00b8\u00b9\u00ba\u00bb\u00bc\u00bd\u00be\u00bf\u00c0\u00c1\u00c2\u00c3\u00c4\u00c5\u00c6\u00c7\u00c8\u00c9\u00ca\u00cb\u00cc\u00cd\u00ce\u00cf\u00d0\u00d1\u00d2\u00d3\u00d4\u00d5\u00d6\u00d7\u00d8\u00d9\u00da\u00db\u00dc\u00dd\u00de\u00df\u00e0\u00e1\u00e2\u00e3\u00e4\u00e5\u00e6\u00e7\u00e8\u00e9\u00ea\u00eb\u00ec\u00ed\u00ee\u00ef\u00f0\u00f1\u00f2\u00f3\u00f4\u00f5\u00f6\u00f7\u00f8",
+     "seqB": "56789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\u007f\u0080\u0081\u0082\u0083\u0084\u0085\u0086\u0087\u0088\u0089\u008a\u008b\u008c\u008d\u008e\u008f\u0090\u0091\u0092\u0093\u0094\u0095\u0096\u0097\u0098\u0099\u009a\u009b\u009c\u009d\u009e\u009f\u00a0\u00a1\u00a2\u00a3\u00a4\u00a5\u00a6\u00a7\u00a8\u00a9\u00aa\u00ab\u00ac\u00ad\u00ae\u00af\u00b0\u00b1\u00b2\u00b3\u00b4\u00b5\u00b6\u00b7\u00b8\u00b9\u00ba\u00bb\u00bc\u00bd\u00be\u00bf\u00c0\u00c1\u00c2\u00c3\u00c4\u00c5\u00c6\u00c7\u00c8\u00c9\u00ca\u00cb\u00cc\u00cd\u00ce\u00cf\u00d0\u00d1\u00d2\u00d3\u00d4\u00d5\u00d6\u00d7\u00d8\u00d9\u00da\u00db\u00dc\u00dd\u00de\u00df\u00e0\u00e1\u00e2\u00e3\u00e4\u00e5\u00e6\u00e7\u00e8\u00e9\u00ea\u00eb\u00ec\u00ed\u00ee\u00ef\u00f0\u00f1\u00f2\u00f3\u00f4\u00f5\u00f6\u00f7\u00f8"
+    }
+   ],
+   "fnat_stats": [
+    1,
+    0,
+    3,
+    1
+   ],
+   "info": {
+    "DockQ": 0.5112803577991729,
+    "F1": 0.5,
+    "LRMSD": 6.8643675801712165,
+    "chain1": "B",
+    "chain2": "C",
+    "chain_map": {
+     "A": "B",
+     "B": "A",
+     "C": "C"
+    },
+    "clashes": 0,
+    "class1": "ligand",
+    "class2": "receptor",
+    "fnat": 0.3333333333333333,
+    "fnonnat": 0,
+    "iRMSD": 1.2369153344265127,
+    "is_het": false,
+    "len1": 124,
+    "len2": 196,
+    "model_total": 1,
+    "nat_correct": 1,
+    "nat_total": 3,
+    "nonnat_count": 0
+   },
+   "irms": 1.2369153344265127,
+   "is_het": false,
+   "lrms": 6.8643675801712165,
+   "native_residue_distances": {
+    "bytes_sha256": "64928f7d8dda0a2c968403a560eb98735f4bc4cb2af0e8ea7d98128da9064b9d",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 43,
+    "n_lt_25": 3,
+    "n_lt_4": 0,
+    "n_lt_fnat": 3,
+    "n_lt_interface": 43,
+    "shape": [
+     124,
+     196
+    ]
+   },
+   "residue_distances": {
+    "bytes_sha256": "b39715d929570b30a7c88bc58603e05289a0eee70b2400745b497defe84738c6",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 29,
+    "n_lt_25": 1,
+    "n_lt_4": 0,
+    "n_lt_fnat": 1,
+    "n_lt_interface": 29,
+    "shape": [
+     124,
+     196
+    ]
+   }
+  },
+  "BC": {
+   "alignments": [
+    {
+     "matches": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\u007f\u0080\u0081\u0082\u0083\u0084\u0085\u0086\u0087\u0088\u0089\u008a\u008b\u008c\u008d\u008e\u008f\u0090\u0091\u0092\u0093\u0094\u0095\u0096\u0097\u0098\u0099\u009a\u009b\u009c\u009d\u009e\u009f\u00a0\u00a1\u00a2\u00a3\u00a4\u00a5\u00a6\u00a7\u00a8\u00a9\u00aa\u00ab\u00ac",
+     "seqB": "123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\u007f\u0080\u0081\u0082\u0083\u0084\u0085\u0086\u0087\u0088\u0089\u008a\u008b\u008c\u008d\u008e\u008f\u0090\u0091\u0092\u0093\u0094\u0095\u0096\u0097\u0098\u0099\u009a\u009b\u009c\u009d\u009e\u009f\u00a0\u00a1\u00a2\u00a3\u00a4\u00a5\u00a6\u00a7\u00a8\u00a9\u00aa\u00ab\u00ac"
+    },
+    {
+     "matches": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "56789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\u007f\u0080\u0081\u0082\u0083\u0084\u0085\u0086\u0087\u0088\u0089\u008a\u008b\u008c\u008d\u008e\u008f\u0090\u0091\u0092\u0093\u0094\u0095\u0096\u0097\u0098\u0099\u009a\u009b\u009c\u009d\u009e\u009f\u00a0\u00a1\u00a2\u00a3\u00a4\u00a5\u00a6\u00a7\u00a8\u00a9\u00aa\u00ab\u00ac\u00ad\u00ae\u00af\u00b0\u00b1\u00b2\u00b3\u00b4\u00b5\u00b6\u00b7\u00b8\u00b9\u00ba\u00bb\u00bc\u00bd\u00be\u00bf\u00c0\u00c1\u00c2\u00c3\u00c4\u00c5\u00c6\u00c7\u00c8\u00c9\u00ca\u00cb\u00cc\u00cd\u00ce\u00cf\u00d0\u00d1\u00d2\u00d3\u00d4\u00d5\u00d6\u00d7\u00d8\u00d9\u00da\u00db\u00dc\u00dd\u00de\u00df\u00e0\u00e1\u00e2\u00e3\u00e4\u00e5\u00e6\u00e7\u00e8\u00e9\u00ea\u00eb\u00ec\u00ed\u00ee\u00ef\u00f0\u00f1\u00f2\u00f3\u00f4\u00f5\u00f6\u00f7\u00f8",
+     "seqB": "56789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\u007f\u0080\u0081\u0082\u0083\u0084\u0085\u0086\u0087\u0088\u0089\u008a\u008b\u008c\u008d\u008e\u008f\u0090\u0091\u0092\u0093\u0094\u0095\u0096\u0097\u0098\u0099\u009a\u009b\u009c\u009d\u009e\u009f\u00a0\u00a1\u00a2\u00a3\u00a4\u00a5\u00a6\u00a7\u00a8\u00a9\u00aa\u00ab\u00ac\u00ad\u00ae\u00af\u00b0\u00b1\u00b2\u00b3\u00b4\u00b5\u00b6\u00b7\u00b8\u00b9\u00ba\u00bb\u00bc\u00bd\u00be\u00bf\u00c0\u00c1\u00c2\u00c3\u00c4\u00c5\u00c6\u00c7\u00c8\u00c9\u00ca\u00cb\u00cc\u00cd\u00ce\u00cf\u00d0\u00d1\u00d2\u00d3\u00d4\u00d5\u00d6\u00d7\u00d8\u00d9\u00da\u00db\u00dc\u00dd\u00de\u00df\u00e0\u00e1\u00e2\u00e3\u00e4\u00e5\u00e6\u00e7\u00e8\u00e9\u00ea\u00eb\u00ec\u00ed\u00ee\u00ef\u00f0\u00f1\u00f2\u00f3\u00f4\u00f5\u00f6\u00f7\u00f8"
+    }
+   ],
+   "fnat_stats": [
+    25,
+    3,
+    50,
+    28
+   ],
+   "info": {
+    "DockQ": 0.45305446346561645,
+    "F1": 0.6410256410256411,
+    "LRMSD": 8.131498175681877,
+    "chain1": "A",
+    "chain2": "C",
+    "chain_map": {
+     "A": "B",
+     "B": "A",
+     "C": "C"
+    },
+    "clashes": 0,
+    "class1": "ligand",
+    "class2": "receptor",
+    "fnat": 0.5,
+    "fnonnat": 0.10714285714285714,
+    "iRMSD": 2.103856735883947,
+    "is_het": false,
+    "len1": 124,
+    "len2": 196,
+    "model_total": 28,
+    "nat_correct": 25,
+    "nat_total": 50,
+    "nonnat_count": 3
+   },
+   "irms": 2.103856735883947,
+   "is_het": false,
+   "lrms": 8.131498175681877,
+   "native_residue_distances": {
+    "bytes_sha256": "5810023ea215b17b46a0427adc511bee1b347a6a1a278a41aaaa07a0c336bc2a",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 370,
+    "n_lt_25": 50,
+    "n_lt_4": 0,
+    "n_lt_fnat": 50,
+    "n_lt_interface": 370,
+    "shape": [
+     124,
+     196
+    ]
+   },
+   "residue_distances": {
+    "bytes_sha256": "7e8e02810512016f1ca7997542f9257666e5a4b6dfcf2401a2e5071645b6ae58",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 233,
+    "n_lt_25": 28,
+    "n_lt_4": 0,
+    "n_lt_fnat": 28,
+    "n_lt_interface": 233,
+    "shape": [
+     124,
+     196
+    ]
+   }
+  }
+ },
+ "kwargs": {
+  "no_align": true
+ },
+ "model": "/Users/Andre.Teixeira/projects/DockQ/examples/1A2K_r_l_b.model.pdb",
+ "n_interfaces": 3,
+ "name": "1A2K_noalign",
+ "native": "/Users/Andre.Teixeira/projects/DockQ/examples/1A2K_r_l_b.pdb",
+ "total_dockq": 1.9587325803681026
+}

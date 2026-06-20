@@ -1,0 +1,97 @@
+{
+ "GlobalDockQ": 0.7750924947135567,
+ "best_chain_map": {
+  "A": "D",
+  "E": "H"
+ },
+ "best_mapping_str": "DH:AE",
+ "best_total_dockq": 0.7750924947135567,
+ "error": null,
+ "interfaces": {
+  "AE": {
+   "alignments": [
+    {
+     "matches": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "LQFYRNLGKSGLRVSCLGLGTWVTFGGQITDEMAEHLMTLAYDNGINLFDTAEVYAAGKAEVVLGNIIKKKGWRRSSLVITTKIFWGGKAETERGLSRKHIIEGLKASLERLQLEYVDVVFANRPDPNTPMEETVRAMTHVINQGMAMYWGTSRWSSMEIMEAYSVARQFNLIPPICEQAEYHMFQREKVEVQLPELFHKIGVGAMTWSPLACGIVSGKYDSGIPPYSRASLKGYQWLKDKILSEEGRRQQAKLKELQAIAERLGCTLPQLAIAWCLRNEGVSSVLLGASNAEQLMENIGAIQVLPKLSSSIVHEIDSILGNKPYS",
+     "seqB": "LQFYRNLGKSGLRVSCLGLGTWVTFGGQITDEMAEHLMTLAYDNGINLFDTAEVYAAGKAEVVLGNIIKKKGWRRSSLVITTKIFWGGKAETERGLSRKHIIEGLKASLERLQLEYVDVVFANRPDPNTPMEETVRAMTHVINQGMAMYWGTSRWSSMEIMEAYSVARQFNLIPPICEQAEYHMFQREKVEVQLPELFHKIGVGAMTWSPLACGIVSGKYDSGIPPYSRASLKGYQWLKDKILSEEGRRQQAKLKELQAIAERLGCTLPQLAIAWCLRNEGVSSVLLGASNAEQLMENIGAIQVLPKLSSSIVHEIDSILGNKPYS"
+    },
+    {
+     "matches": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "CERVVINISGLRFETQLKTLAQFPNTLLGNPKKRMRYFDPLRNEYFFDRNRPSFDAILYYYQSGGRLRRPVNVPLDMFSEEIKFYELGEEA",
+     "seqB": "CERVVINISGLRFETQLKTLAQFPNTLLGNPKKRMRYFDPLRNEYFFDRNRPSFDAILYYYQSGGRLRRPVNVPLDMFSEEIKFYELGEEA"
+    }
+   ],
+   "fnat_stats": [
+    14,
+    2,
+    23,
+    16
+   ],
+   "info": {
+    "DockQ": 0.7750924947135567,
+    "F1": 0.717948717948718,
+    "LRMSD": 2.831229755853094,
+    "chain1": "D",
+    "chain2": "H",
+    "chain_map": {
+     "A": "D",
+     "E": "H"
+    },
+    "clashes": 0,
+    "class1": "receptor",
+    "class2": "ligand",
+    "fnat": 0.6086956521739131,
+    "fnonnat": 0.125,
+    "iRMSD": 0.7112237195862382,
+    "is_het": false,
+    "len1": 326,
+    "len2": 91,
+    "model_total": 16,
+    "nat_correct": 14,
+    "nat_total": 23,
+    "nonnat_count": 2
+   },
+   "irms": 0.7112237195862382,
+   "is_het": false,
+   "lrms": 2.831229755853094,
+   "native_residue_distances": {
+    "bytes_sha256": "a811e11e0ba80ed3f2724478172bf91b096a990b63debb6ca5759f00430ae832",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 175,
+    "n_lt_25": 23,
+    "n_lt_4": 0,
+    "n_lt_fnat": 23,
+    "n_lt_interface": 175,
+    "shape": [
+     326,
+     91
+    ]
+   },
+   "residue_distances": {
+    "bytes_sha256": "97f0f17ee02c367e473d6785e193ef7d863f1bc97bf9032f4a8892d531da871d",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 163,
+    "n_lt_25": 16,
+    "n_lt_4": 0,
+    "n_lt_fnat": 16,
+    "n_lt_interface": 163,
+    "shape": [
+     326,
+     91
+    ]
+   }
+  }
+ },
+ "kwargs": {},
+ "model": "/Users/Andre.Teixeira/projects/DockQ/examples/1EXB_r_l_b.model.pdb",
+ "n_interfaces": 1,
+ "name": "1EXB_cif",
+ "native": "/Users/Andre.Teixeira/projects/DockQ/examples/1EXB.cif.gz",
+ "total_dockq": 0.7750924947135567
+}

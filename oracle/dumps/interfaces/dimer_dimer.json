@@ -1,0 +1,344 @@
+{
+ "GlobalDockQ": 0.9999999999993268,
+ "best_chain_map": {
+  "A": "A",
+  "B": "B",
+  "H": "H",
+  "L": "L"
+ },
+ "best_mapping_str": "ABLH:ABLH",
+ "best_total_dockq": 3.999999999997307,
+ "error": null,
+ "interfaces": {
+  "AB": {
+   "alignments": [
+    {
+     "matches": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "IWELKKDVYVVELDWYPDAPGEMVVLTCDTPEEDGITWTLDQSSEVLGSGKTLTIQVKEFGDAGQYTCHKGGEVLSHSLLLLHKKEDGIWSTDILKDQKEPKNKTFLRCEAKNYSGRFTCWWLTTISTDLTFSVKSSRGSSDPQGVTCGAATLSAERVRGDNKEYEYSVECQEDSACPAAEESLPIEVMVDAVHKLKYENYTSSFFIRDIIKPDPPKNLQLKPLKNSRQVEVSWEYPDTWSTPHSYFSLTFCVQVQKDRVFTDKTSATVICRSISVRAQDRYYSSSWSEWASVPC",
+     "seqB": "IWELKKDVYVVELDWYPDAPGEMVVLTCDTPEEDGITWTLDQSSEVLGSGKTLTIQVKEFGDAGQYTCHKGGEVLSHSLLLLHKKEDGIWSTDILKDQKEPKNKTFLRCEAKNYSGRFTCWWLTTISTDLTFSVKSSRGSSDPQGVTCGAATLSAERVRGDNKEYEYSVECQEDSACPAAEESLPIEVMVDAVHKLKYENYTSSFFIRDIIKPDPPKNLQLKPLKNSRQVEVSWEYPDTWSTPHSYFSLTFCVQVQKDRVFTDKTSATVICRSISVRAQDRYYSSSWSEWASVPC"
+    },
+    {
+     "matches": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "MFPCLHHSQNLLRAVSNMLQKARQTLEFYPCTSDHEDITKDKTSTVEACLPLELTKNESCETSFITNGSCLASRKTSFMMALCLSSIYEDLKMYQVEFKTMNAKLLMDPKRQIFLDQNMLAVIDELMQALNFNSETVPSLEEPDFYKTKIKLCILLHAFRIRAVTIDRVMSYLNAS",
+     "seqB": "MFPCLHHSQNLLRAVSNMLQKARQTLEFYPCTSDHEDITKDKTSTVEACLPLELTKNESCETSFITNGSCLASRKTSFMMALCLSSIYEDLKMYQVEFKTMNAKLLMDPKRQIFLDQNMLAVIDELMQALNFNSETVPSLEEPDFYKTKIKLCILLHAFRIRAVTIDRVMSYLNAS"
+    }
+   ],
+   "fnat_stats": [
+    58,
+    0,
+    58,
+    58
+   ],
+   "info": {
+    "DockQ": 0.9999999999987015,
+    "F1": 1.0,
+    "LRMSD": 5.110602613259818e-06,
+    "chain1": "A",
+    "chain2": "B",
+    "chain_map": {
+     "A": "A",
+     "B": "B",
+     "H": "H",
+     "L": "L"
+    },
+    "clashes": 0,
+    "class1": "receptor",
+    "class2": "ligand",
+    "fnat": 1.0,
+    "fnonnat": 0,
+    "iRMSD": 2.819981906652827e-06,
+    "is_het": false,
+    "len1": 295,
+    "len2": 176,
+    "model_total": 58,
+    "nat_correct": 58,
+    "nat_total": 58,
+    "nonnat_count": 0
+   },
+   "irms": 2.819981906652827e-06,
+   "is_het": false,
+   "lrms": 5.110602613259818e-06,
+   "native_residue_distances": {
+    "bytes_sha256": "2e32f9b0ee3fa46e485d98287a85dc1ea871f5617ca91ad9695e8fef23392989",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 448,
+    "n_lt_25": 58,
+    "n_lt_4": 0,
+    "n_lt_fnat": 58,
+    "n_lt_interface": 448,
+    "shape": [
+     295,
+     176
+    ]
+   },
+   "residue_distances": {
+    "bytes_sha256": "2e32f9b0ee3fa46e485d98287a85dc1ea871f5617ca91ad9695e8fef23392989",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 448,
+    "n_lt_25": 58,
+    "n_lt_4": 0,
+    "n_lt_fnat": 58,
+    "n_lt_interface": 448,
+    "shape": [
+     295,
+     176
+    ]
+   }
+  },
+  "AH": {
+   "alignments": [
+    {
+     "matches": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "IWELKKDVYVVELDWYPDAPGEMVVLTCDTPEEDGITWTLDQSSEVLGSGKTLTIQVKEFGDAGQYTCHKGGEVLSHSLLLLHKKEDGIWSTDILKDQKEPKNKTFLRCEAKNYSGRFTCWWLTTISTDLTFSVKSSRGSSDPQGVTCGAATLSAERVRGDNKEYEYSVECQEDSACPAAEESLPIEVMVDAVHKLKYENYTSSFFIRDIIKPDPPKNLQLKPLKNSRQVEVSWEYPDTWSTPHSYFSLTFCVQVQKDRVFTDKTSATVICRSISVRAQDRYYSSSWSEWASVPC",
+     "seqB": "IWELKKDVYVVELDWYPDAPGEMVVLTCDTPEEDGITWTLDQSSEVLGSGKTLTIQVKEFGDAGQYTCHKGGEVLSHSLLLLHKKEDGIWSTDILKDQKEPKNKTFLRCEAKNYSGRFTCWWLTTISTDLTFSVKSSRGSSDPQGVTCGAATLSAERVRGDNKEYEYSVECQEDSACPAAEESLPIEVMVDAVHKLKYENYTSSFFIRDIIKPDPPKNLQLKPLKNSRQVEVSWEYPDTWSTPHSYFSLTFCVQVQKDRVFTDKTSATVICRSISVRAQDRYYSSSWSEWASVPC"
+    },
+    {
+     "matches": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "EVQLVQSGAEVKKPGESLKISCKGSGYSFTTYWLGWVRQMPGKGLDWIGIMSPVDSDIRYSPSFQGQVTMSVDKSITTAYLQWNSLKASDTAMYYCARRRPGQGYFDFWGQGTLVTVSSSSTKGPSVFPLAPSSKSGTAALGCLVKDYFPEPVTVSWNSGALTSGVHTFPAVLQSSGLYSLSSVVTVPSSSLGTQTYICNVNHKPSNTKVDKRVEPK",
+     "seqB": "EVQLVQSGAEVKKPGESLKISCKGSGYSFTTYWLGWVRQMPGKGLDWIGIMSPVDSDIRYSPSFQGQVTMSVDKSITTAYLQWNSLKASDTAMYYCARRRPGQGYFDFWGQGTLVTVSSSSTKGPSVFPLAPSSKSGTAALGCLVKDYFPEPVTVSWNSGALTSGVHTFPAVLQSSGLYSLSSVVTVPSSSLGTQTYICNVNHKPSNTKVDKRVEPK"
+    }
+   ],
+   "fnat_stats": [
+    49,
+    0,
+    49,
+    49
+   ],
+   "info": {
+    "DockQ": 0.9999999999994383,
+    "F1": 1.0,
+    "LRMSD": 5.760945443665449e-06,
+    "chain1": "A",
+    "chain2": "H",
+    "chain_map": {
+     "A": "A",
+     "B": "B",
+     "H": "H",
+     "L": "L"
+    },
+    "clashes": 0,
+    "class1": "receptor",
+    "class2": "ligand",
+    "fnat": 1.0,
+    "fnonnat": 0,
+    "iRMSD": 1.6606337500816729e-06,
+    "is_het": false,
+    "len1": 295,
+    "len2": 217,
+    "model_total": 49,
+    "nat_correct": 49,
+    "nat_total": 49,
+    "nonnat_count": 0
+   },
+   "irms": 1.6606337500816729e-06,
+   "is_het": false,
+   "lrms": 5.760945443665449e-06,
+   "native_residue_distances": {
+    "bytes_sha256": "737b5a81e82aa0eee2822e8fc24660c6597a09231acaf0d64e5998e2b59f1b85",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 355,
+    "n_lt_25": 49,
+    "n_lt_4": 0,
+    "n_lt_fnat": 49,
+    "n_lt_interface": 355,
+    "shape": [
+     295,
+     217
+    ]
+   },
+   "residue_distances": {
+    "bytes_sha256": "737b5a81e82aa0eee2822e8fc24660c6597a09231acaf0d64e5998e2b59f1b85",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 355,
+    "n_lt_25": 49,
+    "n_lt_4": 0,
+    "n_lt_fnat": 49,
+    "n_lt_interface": 355,
+    "shape": [
+     295,
+     217
+    ]
+   }
+  },
+  "AL": {
+   "alignments": [
+    {
+     "matches": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "IWELKKDVYVVELDWYPDAPGEMVVLTCDTPEEDGITWTLDQSSEVLGSGKTLTIQVKEFGDAGQYTCHKGGEVLSHSLLLLHKKEDGIWSTDILKDQKEPKNKTFLRCEAKNYSGRFTCWWLTTISTDLTFSVKSSRGSSDPQGVTCGAATLSAERVRGDNKEYEYSVECQEDSACPAAEESLPIEVMVDAVHKLKYENYTSSFFIRDIIKPDPPKNLQLKPLKNSRQVEVSWEYPDTWSTPHSYFSLTFCVQVQKDRVFTDKTSATVICRSISVRAQDRYYSSSWSEWASVPC",
+     "seqB": "IWELKKDVYVVELDWYPDAPGEMVVLTCDTPEEDGITWTLDQSSEVLGSGKTLTIQVKEFGDAGQYTCHKGGEVLSHSLLLLHKKEDGIWSTDILKDQKEPKNKTFLRCEAKNYSGRFTCWWLTTISTDLTFSVKSSRGSSDPQGVTCGAATLSAERVRGDNKEYEYSVECQEDSACPAAEESLPIEVMVDAVHKLKYENYTSSFFIRDIIKPDPPKNLQLKPLKNSRQVEVSWEYPDTWSTPHSYFSLTFCVQVQKDRVFTDKTSATVICRSISVRAQDRYYSSSWSEWASVPC"
+    },
+    {
+     "matches": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "DIQMTQSPSSLSASVGDRVTITCRASQGISSWLAWYQQKPEKAPKSLIYAASSLQSGVPSRFSGSGSGTDFTLTISSLQPEDFATYYCQQYNIYPYTFGQGTKLEIKRTVAAPSVFIFPPSDEQLKSGTASVVCLLNNFYPREAKVQWKVDNALQSGNSQESVTEQDSKDSTYSLSSTLTLSKADYEKHKVYACEVTHQGLSSPVTKSFNRGEC",
+     "seqB": "DIQMTQSPSSLSASVGDRVTITCRASQGISSWLAWYQQKPEKAPKSLIYAASSLQSGVPSRFSGSGSGTDFTLTISSLQPEDFATYYCQQYNIYPYTFGQGTKLEIKRTVAAPSVFIFPPSDEQLKSGTASVVCLLNNFYPREAKVQWKVDNALQSGNSQESVTEQDSKDSTYSLSSTLTLSKADYEKHKVYACEVTHQGLSSPVTKSFNRGEC"
+    }
+   ],
+   "fnat_stats": [
+    25,
+    0,
+    25,
+    25
+   ],
+   "info": {
+    "DockQ": 0.9999999999998056,
+    "F1": 1.0,
+    "LRMSD": 6.463622082860353e-06,
+    "chain1": "A",
+    "chain2": "L",
+    "chain_map": {
+     "A": "A",
+     "B": "B",
+     "H": "H",
+     "L": "L"
+    },
+    "clashes": 0,
+    "class1": "receptor",
+    "class2": "ligand",
+    "fnat": 1.0,
+    "fnonnat": 0,
+    "iRMSD": 1.0600081096646477e-07,
+    "is_het": false,
+    "len1": 295,
+    "len2": 214,
+    "model_total": 25,
+    "nat_correct": 25,
+    "nat_total": 25,
+    "nonnat_count": 0
+   },
+   "irms": 1.0600081096646477e-07,
+   "is_het": false,
+   "lrms": 6.463622082860353e-06,
+   "native_residue_distances": {
+    "bytes_sha256": "4971648c3c8f173e85866bd0a49f72fc60d5a3c8e31e5e97e5edc531fc89ccbc",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 184,
+    "n_lt_25": 25,
+    "n_lt_4": 0,
+    "n_lt_fnat": 25,
+    "n_lt_interface": 184,
+    "shape": [
+     295,
+     214
+    ]
+   },
+   "residue_distances": {
+    "bytes_sha256": "4971648c3c8f173e85866bd0a49f72fc60d5a3c8e31e5e97e5edc531fc89ccbc",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 184,
+    "n_lt_25": 25,
+    "n_lt_4": 0,
+    "n_lt_fnat": 25,
+    "n_lt_interface": 184,
+    "shape": [
+     295,
+     214
+    ]
+   }
+  },
+  "LH": {
+   "alignments": [
+    {
+     "matches": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "DIQMTQSPSSLSASVGDRVTITCRASQGISSWLAWYQQKPEKAPKSLIYAASSLQSGVPSRFSGSGSGTDFTLTISSLQPEDFATYYCQQYNIYPYTFGQGTKLEIKRTVAAPSVFIFPPSDEQLKSGTASVVCLLNNFYPREAKVQWKVDNALQSGNSQESVTEQDSKDSTYSLSSTLTLSKADYEKHKVYACEVTHQGLSSPVTKSFNRGEC",
+     "seqB": "DIQMTQSPSSLSASVGDRVTITCRASQGISSWLAWYQQKPEKAPKSLIYAASSLQSGVPSRFSGSGSGTDFTLTISSLQPEDFATYYCQQYNIYPYTFGQGTKLEIKRTVAAPSVFIFPPSDEQLKSGTASVVCLLNNFYPREAKVQWKVDNALQSGNSQESVTEQDSKDSTYSLSSTLTLSKADYEKHKVYACEVTHQGLSSPVTKSFNRGEC"
+    },
+    {
+     "matches": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+     "seqA": "EVQLVQSGAEVKKPGESLKISCKGSGYSFTTYWLGWVRQMPGKGLDWIGIMSPVDSDIRYSPSFQGQVTMSVDKSITTAYLQWNSLKASDTAMYYCARRRPGQGYFDFWGQGTLVTVSSSSTKGPSVFPLAPSSKSGTAALGCLVKDYFPEPVTVSWNSGALTSGVHTFPAVLQSSGLYSLSSVVTVPSSSLGTQTYICNVNHKPSNTKVDKRVEPK",
+     "seqB": "EVQLVQSGAEVKKPGESLKISCKGSGYSFTTYWLGWVRQMPGKGLDWIGIMSPVDSDIRYSPSFQGQVTMSVDKSITTAYLQWNSLKASDTAMYYCARRRPGQGYFDFWGQGTLVTVSSSSTKGPSVFPLAPSSKSGTAALGCLVKDYFPEPVTVSWNSGALTSGVHTFPAVLQSSGLYSLSSVVTVPSSSLGTQTYICNVNHKPSNTKVDKRVEPK"
+    }
+   ],
+   "fnat_stats": [
+    122,
+    0,
+    122,
+    122
+   ],
+   "info": {
+    "DockQ": 0.9999999999993618,
+    "F1": 1.0,
+    "LRMSD": 2.67928937849565e-06,
+    "chain1": "L",
+    "chain2": "H",
+    "chain_map": {
+     "A": "A",
+     "B": "B",
+     "H": "H",
+     "L": "L"
+    },
+    "clashes": 0,
+    "class1": "ligand",
+    "class2": "receptor",
+    "fnat": 1.0,
+    "fnonnat": 0,
+    "iRMSD": 2.0210085839764178e-06,
+    "is_het": false,
+    "len1": 214,
+    "len2": 217,
+    "model_total": 122,
+    "nat_correct": 122,
+    "nat_total": 122,
+    "nonnat_count": 0
+   },
+   "irms": 2.0210085839764178e-06,
+   "is_het": false,
+   "lrms": 2.67928937849565e-06,
+   "native_residue_distances": {
+    "bytes_sha256": "50a5189abc310f68cfefd692ccef9417e47ac3a5c89a734bab6cd4972e60c05f",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 1007,
+    "n_lt_25": 122,
+    "n_lt_4": 0,
+    "n_lt_fnat": 122,
+    "n_lt_interface": 1007,
+    "shape": [
+     214,
+     217
+    ]
+   },
+   "residue_distances": {
+    "bytes_sha256": "50a5189abc310f68cfefd692ccef9417e47ac3a5c89a734bab6cd4972e60c05f",
+    "dtype": "float32",
+    "fnat_threshold": 5.0,
+    "full": null,
+    "interface_threshold": 10.0,
+    "n_lt_100": 1007,
+    "n_lt_25": 122,
+    "n_lt_4": 0,
+    "n_lt_fnat": 122,
+    "n_lt_interface": 1007,
+    "shape": [
+     214,
+     217
+    ]
+   }
+  }
+ },
+ "kwargs": {},
+ "model": "/Users/Andre.Teixeira/projects/DockQ/examples/dimer_dimer.model.pdb",
+ "n_interfaces": 4,
+ "name": "dimer_dimer",
+ "native": "/Users/Andre.Teixeira/projects/DockQ/examples/dimer_dimer.pdb",
+ "total_dockq": 3.999999999997307
+}
