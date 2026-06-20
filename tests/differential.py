@@ -62,7 +62,7 @@ def run_oracle(model, native, flags):
 
 
 def run_rust(model, native, flags):
-    return run_json([RUST, model, native, "--diff-json", *flags])
+    return run_json([RUST, model, native, "--diff_json", *flags])
 
 
 def cmp_interface(name, pair, o, r):

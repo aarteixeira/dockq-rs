@@ -19,10 +19,10 @@ struct Args {
     native: String,
 
     /// Use the capri_peptide thresholds (CB interface, 4Å/8Å).
-    #[arg(long)]
+    #[arg(long = "capri_peptide")]
     capri_peptide: bool,
     /// Score a small-molecule pose (NOT supported in this build — hard-errors).
-    #[arg(long)]
+    #[arg(long = "small_molecule")]
     small_molecule: bool,
     /// Short single-line-per-interface output.
     #[arg(long)]
@@ -31,30 +31,41 @@ struct Args {
     #[arg(long, short)]
     verbose: bool,
     /// Align by residue numbering instead of sequence.
-    #[arg(long)]
+    #[arg(long = "no_align")]
     no_align: bool,
     /// Number of worker threads (default: all cores).
-    #[arg(long)]
+    #[arg(long = "n_cpu")]
     n_cpu: Option<usize>,
     /// Accepted for compatibility; chunking is handled automatically by Rayon.
-    #[arg(long)]
+    #[arg(long = "max_chunk")]
     max_chunk: Option<usize>,
     /// Allowed sequence mismatches when clustering homologous chains.
-    #[arg(long, default_value_t = 0)]
+    #[arg(long = "allowed_mismatches", default_value_t = 0)]
     allowed_mismatches: usize,
     /// Chain mapping MODELCHAINS:NATIVECHAINS (with optional `*` wildcards).
     #[arg(long)]
     mapping: Option<String>,
+    /// Optimize the mapping on DockQ_F1 instead of DockQ (not implemented — hard-errors).
+    #[arg(long = "optDockQF1")]
+    opt_dockq_f1: bool,
     /// Write the full result as JSON to this file (like the reference `--json`).
     #[arg(long)]
     json: Option<String>,
     /// Print the oracle-compatible result JSON to stdout (for differential testing).
-    #[arg(long)]
+    #[arg(long = "diff_json")]
     diff_json: bool,
 }
 
 fn main() {
     let args = Args::parse();
+
+    if args.opt_dockq_f1 {
+        eprintln!(
+            "dockq-rs error: --optDockQF1 (optimize mapping on DockQ_F1) is not implemented \
+             in this build; it does not silently fall back to DockQ selection."
+        );
+        exit(2);
+    }
 
     if let Some(n) = args.n_cpu {
         if n > 0 {
