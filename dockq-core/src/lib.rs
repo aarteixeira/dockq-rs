@@ -17,6 +17,11 @@ pub mod parser;
 pub use error::{DockQError, Result};
 pub use model::{Alignment, Atom, Chain, DistMatrix, InterfaceResult, Residue, Structure};
 
+pub use batch::{score_one_vs_many, score_pair, score_pairs, scan_structures, BatchOutcome};
+pub use dockq::{calc_dockq, dockq_formula, f1};
+pub use mapping::{score_structures, RunOptions, RunResult};
+pub use parser::load_structure;
+
 /// DockQ score thresholds and atom sets (ported from `constants.py`).
 pub mod constants {
     pub const FNAT_THRESHOLD: f64 = 5.0;
