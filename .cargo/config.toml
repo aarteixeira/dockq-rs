@@ -1,0 +1,9 @@
+# Allow the PyO3 extension module (dockq-py) to link with Python symbols left
+# undefined — they are resolved by the Python interpreter at import time. This is
+# what maturin/setuptools-rust set up; adding it here lets `cargo build --workspace`
+# succeed too. Harmless for the core lib and CLI binary (they have no undefined symbols).
+[target.aarch64-apple-darwin]
+rustflags = ["-C", "link-arg=-undefined", "-C", "link-arg=dynamic_lookup"]
+
+[target.x86_64-apple-darwin]
+rustflags = ["-C", "link-arg=-undefined", "-C", "link-arg=dynamic_lookup"]
