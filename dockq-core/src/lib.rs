@@ -19,7 +19,7 @@ pub use model::{Alignment, Atom, Chain, DistMatrix, InterfaceResult, Residue, St
 
 pub use batch::{score_one_vs_many, score_pair, score_pairs, scan_structures, BatchOutcome};
 pub use dockq::{calc_dockq, dockq_formula, f1};
-pub use mapping::{score_structures, RunOptions, RunResult};
+pub use mapping::{run_on_native_interfaces, score_structures, RunOptions, RunResult};
 pub use parser::load_structure;
 
 /// DockQ score thresholds and atom sets (ported from `constants.py`).

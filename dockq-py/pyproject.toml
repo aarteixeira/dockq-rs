@@ -16,3 +16,5 @@ classifiers = [
 [tool.maturin]
 features = ["pyo3/extension-module"]
 module-name = "dockq_rs"
+# Ship the pure-Python `DockQ` drop-in compat package alongside the extension.
+python-source = "python"

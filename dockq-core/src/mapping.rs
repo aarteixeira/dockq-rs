@@ -76,6 +76,57 @@ fn run_on_chains(
     dockq::calc_dockq(model_chains, native_chains, (&aln0, &aln1), capri_peptide)
 }
 
+/// Score every native interface for an explicit native→model chain map (ports the public
+/// `run_on_all_native_interfaces`). This is the single-map path used by the drop-in Python
+/// API; the multimer search uses a cached variant internally. Returns (per-interface
+/// results keyed by native chain pair, total DockQ).
+pub fn run_on_native_interfaces(
+    model: &Structure,
+    native: &Structure,
+    chain_map: &IndexMap<String, String>,
+    no_align: bool,
+    capri_peptide: bool,
+) -> Result<(IndexMap<String, InterfaceResult>, f64)> {
+    let mut result_mapping: IndexMap<String, InterfaceResult> = IndexMap::new();
+    let native_ids: Vec<&String> = chain_map.keys().collect();
+
+    for a in 0..native_ids.len() {
+        for b in (a + 1)..native_ids.len() {
+            let (na, nb) = (native_ids[a], native_ids[b]);
+            let (ma, mb) = (&chain_map[na], &chain_map[nb]);
+            if ma == mb {
+                continue;
+            }
+            let nc0 = native
+                .chain(na)
+                .ok_or_else(|| DockQError::ChainNotFound(na.clone()))?;
+            let nc1 = native
+                .chain(nb)
+                .ok_or_else(|| DockQError::ChainNotFound(nb.clone()))?;
+            let mc0 = model
+                .chain(ma)
+                .ok_or_else(|| DockQError::ChainNotFound(ma.clone()))?;
+            let mc1 = model
+                .chain(mb)
+                .ok_or_else(|| DockQError::ChainNotFound(mb.clone()))?;
+            let small_molecule = nc0.is_het.is_some() || nc1.is_het.is_some();
+            if let Some(mut info) = run_on_chains(
+                (mc0, mc1),
+                (nc0, nc1),
+                no_align,
+                capri_peptide,
+                small_molecule,
+            )? {
+                info.chain1 = ma.clone();
+                info.chain2 = mb.clone();
+                result_mapping.insert(format!("{}{}", na, nb), info);
+            }
+        }
+    }
+    let total: f64 = result_mapping.values().map(|r| r.dockq).sum();
+    Ok((result_mapping, total))
+}
+
 /// Parse `--mapping`. Returns (initial native→model fixed map, explicit model chain list,
 /// explicit native chain list). Ports `format_mapping`.
 pub(crate) fn format_mapping(

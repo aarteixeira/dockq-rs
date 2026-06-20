@@ -231,6 +231,7 @@ name = "dockq-py"
 version = "0.1.0"
 dependencies = [
  "dockq-core",
+ "indexmap",
  "pyo3",
 ]
 
