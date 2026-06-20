@@ -5,17 +5,46 @@ build-backend = "maturin"
 [project]
 name = "dockq-rs"
 version = "0.1.0"
-description = "Rust reimplementation of DockQ scoring internals (protein/NA core) with a Python wrapper"
+description = "Fast Rust reimplementation of the DockQ protein/nucleic-acid docking scorer, with a Python API"
+readme = "README.md"
 requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "André Teixeira" }]
+keywords = [
+    "DockQ",
+    "docking",
+    "protein",
+    "bioinformatics",
+    "structural-biology",
+    "scoring",
+    "structure-prediction",
+]
 classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
     "Programming Language :: Rust",
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
 ]
+
+[project.urls]
+Homepage = "https://github.com/aarteixeira/dockq-rs"
+Repository = "https://github.com/aarteixeira/dockq-rs"
+Issues = "https://github.com/aarteixeira/dockq-rs/issues"
 
 [tool.maturin]
 features = ["pyo3/extension-module"]
-# Mixed layout: native ext as dockq_rs._dockq_rs, with pure-Python dockq_rs/ and the
-# DockQ drop-in compat package both shipped from python-source.
+# Native ext as dockq_rs._dockq_rs, with the pure-Python dockq_rs/ package shipped from
+# python-source. (The DockQ drop-in shim is intentionally NOT shipped — it would collide
+# with the original `dockq` package on PyPI.)
 module-name = "dockq_rs._dockq_rs"
 python-source = "python"

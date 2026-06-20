@@ -38,7 +38,12 @@ COMMON = ["DockQ", "F1", "iRMSD", "LRMSD", "fnat", "fnonnat", "nat_correct", "na
 
 
 def collect():
-    from DockQ.DockQ import load_PDB, run_on_all_native_interfaces
+    # The Rust package exposes the API as `dockq_rs`; the reference exposes it as
+    # `DockQ.DockQ`. Use whichever is installed so the same script runs in both venvs.
+    try:
+        from dockq_rs import load_PDB, run_on_all_native_interfaces
+    except ImportError:
+        from DockQ.DockQ import load_PDB, run_on_all_native_interfaces
     out = {}
     for name, m, n, cmap in CASES:
         model = load_PDB(m)

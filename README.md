@@ -3,7 +3,11 @@
 A Rust reimplementation of the [DockQ](https://github.com/bjornwallner/DockQ) scoring
 internals (protein / nucleic-acid core) with a Python wrapper. Same scores as upstream
 DockQ v2.1.3, **~20–25× faster** on real workloads, with a parallel batch API and a
-drop-in Python interface so existing code migrates with zero changes.
+Python API that mirrors DockQ's functions (migrate with a one-line import change).
+
+```bash
+pip install dockq-rs
+```
 
 ```text
 $ dockq-rs examples/1A2K_r_l_b.model.pdb examples/1A2K_r_l_b.pdb --short
@@ -52,8 +56,8 @@ Validated against the Python/Cython reference as the oracle (see [`tests/`](test
   deviation on any score **4.84e-05**; integer contact counts **exact**; mapping / class /
   chain assignment **exact**.
 - **Golden parity:** reproduces upstream `testdata/*.dockq` byte-for-byte (8/8).
-- **Drop-in parity:** identical user code in the reference and Rust venvs gives identical
-  results.
+- **API parity:** `load_PDB` / `run_on_all_native_interfaces` return the same values as the
+  reference (verified by running the same logic through both and comparing).
 - **30 tests** in `dockq-core` (25 unit + 5 end-to-end integration on vendored data;
   geometry bit-exact to the Cython kernel; alignment fuzzed on 35k+ pairs against Biopython
   with 0 mismatches; parser exact to the f32 bit pattern on all example files).
@@ -61,14 +65,17 @@ Validated against the Python/Cython reference as the oracle (see [`tests/`](test
 ## Install
 
 ```bash
-# from the repo (needs a Rust toolchain + maturin)
-cd dockq-py
-maturin develop --release        # or: maturin build --release && pip install <wheel>
+pip install dockq-rs                 # prebuilt wheels for Linux/macOS/Windows
 ```
 
-This installs the `dockq_rs` extension, a `dockq_rs` Python package, and the `DockQ`
-drop-in compat package. The standalone CLI binary is `cargo build --release -p dockq-cli`
-(`target/release/dockq-rs`).
+From source (needs a Rust toolchain + maturin):
+
+```bash
+cd dockq-py && maturin develop --release
+```
+
+This provides the `dockq_rs` Python module. The standalone CLI binary is
+`cargo build --release -p dockq-cli` (`target/release/dockq-rs`).
 
 ## Usage
 
@@ -99,10 +106,13 @@ Scoring flags (`--capri_peptide`, `--no_align`, `--allowed_mismatches`, `--mappi
 reported as an explicit `error:` row (never silently dropped) and the run exits non-zero if
 any job failed.
 
-### Python — drop-in (no code changes from upstream)
+### Python — migrating from DockQ (one-line import change)
+
+The function signatures and return shapes match the reference; change
+`from DockQ.DockQ import ...` to `from dockq_rs import ...`:
 
 ```python
-from DockQ.DockQ import load_PDB, run_on_all_native_interfaces
+from dockq_rs import load_PDB, run_on_all_native_interfaces
 
 model  = load_PDB("model.pdb")
 native = load_PDB("native.pdb")
