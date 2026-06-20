@@ -559,8 +559,13 @@ mod tests {
     #[ignore]
     fn fuzz_against_biopython_oracle() {
         use std::collections::BTreeMap;
-        let path = "/tmp/align_oracle.json";
-        let data = std::fs::read_to_string(path)
+        let path = std::env::var("DOCKQ_ALIGN_ORACLE").unwrap_or_else(|_| {
+            std::env::temp_dir()
+                .join("align_oracle.json")
+                .to_string_lossy()
+                .into_owned()
+        });
+        let data = std::fs::read_to_string(&path)
             .unwrap_or_else(|e| panic!("read {path}: {e}"));
 
         // Minimal hand-rolled extraction of the JSON string fields we need,
@@ -616,8 +621,13 @@ mod tests {
     #[test]
     #[ignore]
     fn fuzz_numbering_against_dockq() {
-        let path = "/tmp/numbering_oracle.json";
-        let data = std::fs::read_to_string(path)
+        let path = std::env::var("DOCKQ_NUMBERING_ORACLE").unwrap_or_else(|_| {
+            std::env::temp_dir()
+                .join("numbering_oracle.json")
+                .to_string_lossy()
+                .into_owned()
+        });
+        let data = std::fs::read_to_string(&path)
             .unwrap_or_else(|e| panic!("read {path}: {e}"));
         let cases = parse_numbering_cases(&data);
         assert!(!cases.is_empty(), "no numbering cases parsed");

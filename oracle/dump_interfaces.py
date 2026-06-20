@@ -15,9 +15,9 @@ each scored native chain pair:
 
 All numeric library functions are reused (no reimplementation of DockQ logic).
 
-Regenerate:
-  source /Users/Andre.Teixeira/projects/DockQ/.venv-baseline/bin/activate
-  python /Users/Andre.Teixeira/projects/dockq-rs/oracle/dump_interfaces.py
+Regenerate (with the reference DockQ on PYTHONPATH; set DOCKQ_REPO if it is not a
+sibling ../DockQ):
+  python oracle/dump_interfaces.py
 """
 import hashlib
 import itertools
@@ -54,8 +54,12 @@ from DockQ.constants import (
     INTERFACE_THRESHOLD_PEPTIDE,
 )
 
-EX = "/Users/Andre.Teixeira/projects/DockQ/examples"
-OUT = "/Users/Andre.Teixeira/projects/dockq-rs/oracle/dumps/interfaces"
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_DOCKQ = os.environ.get("DOCKQ_REPO") or os.path.join(
+    os.path.dirname(os.path.dirname(_HERE)), "DockQ"
+)
+EX = os.environ.get("DOCKQ_EXAMPLES", os.path.join(_DOCKQ, "examples"))
+OUT = os.path.join(_HERE, "dumps", "interfaces")
 
 # Full-matrix dump cap: emit nested list only when r*c <= this.
 FULL_MATRIX_CAP = 4000

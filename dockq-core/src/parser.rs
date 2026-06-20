@@ -18,7 +18,7 @@
 //! Biopython byte-for-byte (auth ids, file-order chains, the exact `seq1` table, the `line[12:16]`
 //! space rule, exact float32 from the literal coordinate text) is fewer moving parts and lower
 //! risk done directly against the text. The Python source is mirrored line-for-line below; the
-//! oracle JSON dumps (`/Users/Andre.Teixeira/projects/dockq-rs/oracle/dumps/parse{,_het}/`) are
+//! oracle JSON dumps (`oracle/dumps/parse{,_het}/`, regenerable via `oracle/dump_parse.py`) are
 //! the judge — validated to match EXACTLY (chain order, sequence, residue ids, per-residue atom
 //! names+order+count, and every coordinate to the f32 bit pattern) for all 13 example files on
 //! both the core (`parse_hetatms=false`) and small-molecule (`parse_hetatms=true`) paths.
@@ -920,13 +920,15 @@ fn tokenize_cif_line(line: &str) -> Vec<String> {
 
 // ===========================================================================
 // Tests — assert key invariants against hardcoded oracle-derived values.
-// (Oracle dumps: /Users/Andre.Teixeira/projects/dockq-rs/oracle/dumps/parse/*.json)
+// (Expected values cross-checked against oracle/dumps/parse/*.json.)
 // ===========================================================================
 #[cfg(test)]
 mod tests {
     use super::*;
 
-    const EX: &str = "/Users/Andre.Teixeira/projects/DockQ/examples";
+    // Vendored example structures (a small MIT-licensed subset of upstream DockQ's
+    // examples/), resolved at compile time so `cargo test` passes on any machine.
+    const EX: &str = concat!(env!("CARGO_MANIFEST_DIR"), "/tests/data");
 
     fn load(name: &str) -> Structure {
         load_structure(&format!("{EX}/{name}"), &[], false, 0).expect("load ok")

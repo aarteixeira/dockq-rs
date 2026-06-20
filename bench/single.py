@@ -1,14 +1,20 @@
 """Single-pair latency: reference DockQ CLI vs Rust dockq-rs CLI (median of K runs,
 full process incl. parse + chain-mapping search). The 1EXB search case (576 chain-mapping
 combinations, 16 interfaces) is the "calculations take too long" headline."""
+import os
 import statistics
 import subprocess
 import sys
 import time
+from pathlib import Path
 
-DOCKQ = "/Users/Andre.Teixeira/projects/DockQ"
-PYBIN = f"{DOCKQ}/.venv-baseline/bin/python"
-RUST = "/Users/Andre.Teixeira/projects/dockq-rs/target/release/dockq-rs"
+# Portable discovery (override with DOCKQ_REPO / DOCKQ_PYTHON / DOCKQ_RS_BIN).
+REPO = Path(__file__).resolve().parent.parent
+RUST = str(os.environ.get("DOCKQ_RS_BIN", REPO / "target" / "release" / "dockq-rs"))
+DOCKQ = os.environ.get("DOCKQ_REPO") or str(REPO.parent / "DockQ")
+if not (Path(DOCKQ) / "examples").is_dir():
+    sys.exit("Set DOCKQ_REPO to your reference DockQ checkout (with examples/).")
+PYBIN = os.environ.get("DOCKQ_PYTHON", f"{DOCKQ}/.venv-baseline/bin/python")
 
 K = int(sys.argv[1]) if len(sys.argv) > 1 else 7
 

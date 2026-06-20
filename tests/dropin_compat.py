@@ -7,9 +7,22 @@ Run in each venv with a tag, then diff the two JSON files:
     python tests/dropin_compat.py diff /tmp/dropin_ref.json /tmp/dropin_rust.json
 """
 import json
+import os
 import sys
+from pathlib import Path
 
-EX = "/Users/Andre.Teixeira/projects/DockQ/examples"
+
+def _examples_dir():
+    env = os.environ.get("DOCKQ_REPO")
+    if env:
+        return f"{env}/examples"
+    sibling = Path(__file__).resolve().parent.parent.parent / "DockQ" / "examples"
+    if sibling.is_dir():
+        return str(sibling)
+    sys.exit("Set DOCKQ_REPO to your reference DockQ checkout (with examples/).")
+
+
+EX = _examples_dir()
 
 # (name, model, native, chain_map native->model)
 CASES = [

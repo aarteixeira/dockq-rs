@@ -8,10 +8,10 @@ The reference implementation is **correct by definition**. These dumps are
 produced by calling the reference library's own functions (no DockQ logic is
 reimplemented here), so they are authoritative.
 
-- Reference repo: `/Users/Andre.Teixeira/projects/DockQ`
+- Reference repo: `$DOCKQ_REPO`
 - Reference version: DockQ **2.1.3**, Python **3.12.8**, NumPy float32 coords
-- Example structures: `/Users/Andre.Teixeira/projects/DockQ/examples/`
-- Golden CLI outputs: `/Users/Andre.Teixeira/projects/DockQ/testdata/`
+- Example structures: `$DOCKQ_REPO/examples/`
+- Golden CLI outputs: `$DOCKQ_REPO/testdata/`
 
 ## Conventions (read first)
 
@@ -279,26 +279,26 @@ Verified against golden CLI (`testdata/`):
 Activate the venv in every shell first:
 
 ```bash
-source /Users/Andre.Teixeira/projects/DockQ/.venv-baseline/bin/activate
+source $DOCKQ_REPO/.venv-baseline/bin/activate
 ```
 
 Then:
 
 ```bash
 # (A) parse dumps -> dumps/parse/*.json and dumps/parse_het/*.json
-python /Users/Andre.Teixeira/projects/dockq-rs/oracle/dump_parse.py
+python oracle/dump_parse.py
 
 # (B) interface dumps -> dumps/interfaces/*.json
-python /Users/Andre.Teixeira/projects/dockq-rs/oracle/dump_interfaces.py
+python oracle/dump_interfaces.py
 
 # (C) CLI differential target (examples)
-python /Users/Andre.Teixeira/projects/dockq-rs/oracle/oracle_run.py \
-    /Users/Andre.Teixeira/projects/DockQ/examples/1A2K_r_l_b.model.pdb \
-    /Users/Andre.Teixeira/projects/DockQ/examples/1A2K_r_l_b.pdb
+python oracle/oracle_run.py \
+    $DOCKQ_REPO/examples/1A2K_r_l_b.model.pdb \
+    $DOCKQ_REPO/examples/1A2K_r_l_b.pdb
 
-python /Users/Andre.Teixeira/projects/dockq-rs/oracle/oracle_run.py \
-    /Users/Andre.Teixeira/projects/DockQ/examples/6qwn-assembly1.cif.gz \
-    /Users/Andre.Teixeira/projects/DockQ/examples/6qwn-assembly2.cif.gz --capri_peptide
+python oracle/oracle_run.py \
+    $DOCKQ_REPO/examples/6qwn-assembly1.cif.gz \
+    $DOCKQ_REPO/examples/6qwn-assembly2.cif.gz --capri_peptide
 ```
 
 Validate all emitted JSON:
@@ -306,7 +306,7 @@ Validate all emitted JSON:
 ```bash
 python - <<'PY'
 import json, glob
-for f in sorted(glob.glob('/Users/Andre.Teixeira/projects/dockq-rs/oracle/dumps/**/*.json', recursive=True)):
+for f in sorted(glob.glob('oracle/dumps/**/*.json', recursive=True)):
     json.load(open(f))
 print("all JSON valid")
 PY

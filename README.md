@@ -54,9 +54,9 @@ Validated against the Python/Cython reference as the oracle (see [`tests/`](test
 - **Golden parity:** reproduces upstream `testdata/*.dockq` byte-for-byte (8/8).
 - **Drop-in parity:** identical user code in the reference and Rust venvs gives identical
   results.
-- **25 unit tests** in `dockq-core` (geometry bit-exact to the Cython kernel; alignment
-  fuzzed on 35k+ pairs against Biopython with 0 mismatches; parser exact to the f32 bit
-  pattern on all example files).
+- **30 tests** in `dockq-core` (25 unit + 5 end-to-end integration on vendored data;
+  geometry bit-exact to the Cython kernel; alignment fuzzed on 35k+ pairs against Biopython
+  with 0 mismatches; parser exact to the f32 bit pattern on all example files).
 
 ## Install
 
@@ -155,10 +155,22 @@ Coordinates and geometry are f32 to match Biopython's storage and the Cython ker
 
 ## Running tests
 
+`cargo test` is self-contained (it uses small vendored example structures, so it passes
+on any machine with no external setup):
+
 ```bash
-cargo test -p dockq-core                                   # 25 unit tests
-.venv-baseline/bin/python tests/differential.py            # vs Python oracle
-bash tests/golden.sh                                       # byte-parity vs testdata/*.dockq
+cargo test -p dockq-core        # 25 unit + 5 integration tests, no external deps
+```
+
+The differential / golden / drop-in tests compare against a reference DockQ checkout.
+They auto-discover a sibling `../DockQ`, or point them anywhere with env vars (nothing is
+hardcoded):
+
+```bash
+export DOCKQ_REPO=/path/to/DockQ                # reference checkout (examples/ + testdata/)
+export DOCKQ_PYTHON=$DOCKQ_REPO/.venv/bin/python # python with reference DockQ installed
+python3 tests/differential.py                    # vs Python oracle (13 cases)
+bash    tests/golden.sh                           # byte-parity vs testdata/*.dockq
 ```
 
 ## Credit

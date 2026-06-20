@@ -11,15 +11,36 @@ chosen mapping, chain assignment and class labels must match exactly.
 No silent failures: any mismatch is printed in full and the script exits non-zero.
 """
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
 
-DOCKQ = Path("/Users/Andre.Teixeira/projects/DockQ")
+# Portable discovery — no hardcoded paths.
+#   DOCKQ_REPO   : reference DockQ checkout (needs examples/ + testdata/). Defaults to a
+#                  sibling ../DockQ if present.
+#   DOCKQ_PYTHON : python with the reference DockQ installed (defaults to
+#                  $DOCKQ_REPO/.venv-baseline/bin/python).
+#   DOCKQ_RS_BIN : the Rust CLI (defaults to <repo>/target/release/dockq-rs).
+HERE = Path(__file__).resolve().parent
+REPO = HERE.parent
+ORACLE = REPO / "oracle" / "oracle_run.py"
+RUST = Path(os.environ.get("DOCKQ_RS_BIN", REPO / "target" / "release" / "dockq-rs"))
+
+
+def _find_dockq():
+    env = os.environ.get("DOCKQ_REPO")
+    if env:
+        return Path(env)
+    sibling = REPO.parent / "DockQ"
+    if (sibling / "examples").is_dir():
+        return sibling
+    sys.exit("Set DOCKQ_REPO to your reference DockQ checkout (with examples/ and testdata/).")
+
+
+DOCKQ = _find_dockq()
 EX = DOCKQ / "examples"
-PYBIN = DOCKQ / ".venv-baseline/bin/python"
-ORACLE = Path("/Users/Andre.Teixeira/projects/dockq-rs/oracle/oracle_run.py")
-RUST = Path("/Users/Andre.Teixeira/projects/dockq-rs/target/release/dockq-rs")
+PYBIN = Path(os.environ.get("DOCKQ_PYTHON", DOCKQ / ".venv-baseline" / "bin" / "python"))
 
 # Tolerances
 RMSD_ABS = 1.0e-3   # iRMSD / LRMSD / DockQ: f32 geometry + different SVD backend

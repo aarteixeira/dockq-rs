@@ -12,9 +12,9 @@ Runs each file twice:
 
 Errors are caught per-file and recorded in the JSON "error" field (never abort).
 
-Regenerate:
-  source /Users/Andre.Teixeira/projects/DockQ/.venv-baseline/bin/activate
-  python /Users/Andre.Teixeira/projects/dockq-rs/oracle/dump_parse.py
+Regenerate (with the reference DockQ on PYTHONPATH; set DOCKQ_REPO if it is not a
+sibling ../DockQ):
+  python oracle/dump_parse.py
 """
 import json
 import os
@@ -25,8 +25,12 @@ import numpy as np
 
 from DockQ.DockQ import load_PDB
 
-EXAMPLES_DIR = "/Users/Andre.Teixeira/projects/DockQ/examples"
-OUT_BASE = "/Users/Andre.Teixeira/projects/dockq-rs/oracle/dumps"
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_DOCKQ = os.environ.get("DOCKQ_REPO") or os.path.join(
+    os.path.dirname(os.path.dirname(_HERE)), "DockQ"
+)
+EXAMPLES_DIR = os.environ.get("DOCKQ_EXAMPLES", os.path.join(_DOCKQ, "examples"))
+OUT_BASE = os.path.join(_HERE, "dumps")
 
 # All example structure files named in the task.
 EXAMPLE_FILES = [

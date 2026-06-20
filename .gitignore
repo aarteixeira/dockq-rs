@@ -2,3 +2,9 @@
 **/*.rs.bk
 *.so
 dist/
+__pycache__/
+*.pyc
+.venv*/
+# Generated ground-truth fixtures (regenerate with oracle/dump_*.py); they also embed
+# absolute paths, so they are not committed.
+/oracle/dumps/

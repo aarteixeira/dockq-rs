@@ -5,11 +5,18 @@
 # header) compare verbatim.
 set -uo pipefail
 
-DOCKQ="/Users/Andre.Teixeira/projects/DockQ"
-BIN="/Users/Andre.Teixeira/projects/dockq-rs/target/release/dockq-rs"
+# Portable discovery — no hardcoded paths. Override with DOCKQ_REPO / DOCKQ_RS_BIN.
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO="$(dirname "$HERE")"
+BIN="${DOCKQ_RS_BIN:-$REPO/target/release/dockq-rs}"
+DOCKQ="${DOCKQ_REPO:-$(dirname "$REPO")/DockQ}"
 
 if [ ! -x "$BIN" ]; then
     echo "FATAL: build the release CLI first: cargo build --release -p dockq-cli"
+    exit 2
+fi
+if [ ! -d "$DOCKQ/testdata" ]; then
+    echo "FATAL: set DOCKQ_REPO to your reference DockQ checkout (needs testdata/ and examples/)"
     exit 2
 fi
 cd "$DOCKQ" || exit 2
