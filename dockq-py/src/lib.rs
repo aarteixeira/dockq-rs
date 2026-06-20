@@ -268,7 +268,7 @@ fn version() -> &'static str {
 }
 
 #[pymodule]
-fn dockq_rs(m: &Bound<'_, PyModule>) -> PyResult<()> {
+fn _dockq_rs(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_class::<PyStructure>()?;
     // Drop-in compatible API (reference names).
     m.add_function(wrap_pyfunction!(load_PDB, m)?)?;
