@@ -82,6 +82,23 @@ dockq-rs model.pdb native.pdb --mapping 'ABC:BCA'   # or ':BC', 'A*:W*', --no_al
 dockq-rs model.pdb native.pdb --json out.json
 ```
 
+### CLI — batch (parallel in Rust)
+
+```bash
+# rank many models against one native (TSV, sorted by GlobalDockQ)
+dockq-rs batch --native native.pdb --models m1.pdb m2.pdb m3.pdb --sort
+dockq-rs batch --native native.pdb --models_dir ./models --sort        # every .pdb/.cif in a dir
+dockq-rs batch --native native.pdb --models_from list.txt              # paths, one per line
+
+# arbitrary (model, native) pairs, "model native" per line
+dockq-rs batch --pairs_from pairs.txt --format json -o results.json
+```
+
+Scoring flags (`--capri_peptide`, `--no_align`, `--allowed_mismatches`, `--mapping`,
+`--n_cpu`) apply to every job. Output is TSV (default) or `--format json`. A failed job is
+reported as an explicit `error:` row (never silently dropped) and the run exits non-zero if
+any job failed.
+
 ### Python — drop-in (no code changes from upstream)
 
 ```python
